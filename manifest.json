@@ -1,0 +1,23 @@
+{
+  "manifest_version": 3,
+  "name": "AutoLike",
+  "description": "Auto click on like button on every video you watch on youtube",
+  "version": "1.0",
+  "icons":{},
+  "permissions": [
+    "tabs"
+  ],
+  "content_scripts":[
+    {
+      "js":["./scripts/script.js"],
+      "matches": ["https://www.youtube.com/watch?*"]
+    }
+  ],
+  "action":{
+    "default_popup":"./popup.html",
+    "default_icon": {
+      "128": "./icons/positive-vote-128.png",
+      "256": "./icons/positive-vote-256.png"
+    }
+  }
+}
