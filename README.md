@@ -1,2 +1,2 @@
 # auto-like
-An auto like youtube button
+An extension for chrome to automatically like videos
