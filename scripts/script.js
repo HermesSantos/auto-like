@@ -1,5 +1,5 @@
 //Verify if the 'primary' id exists every one second
-let handleLoading = setInterval (()=>checkBodyLoad(), 1000)
+setInterval (()=>checkBodyLoad(), 1000)
 
 //if the 'primary' id existes it calls the click function
 function checkBodyLoad () {
