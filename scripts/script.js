@@ -1,7 +1,5 @@
-//Verify if the 'primary' id exists every one second
 setInterval (()=>checkBodyLoad(), 1000)
 
-//if the 'primary' id existes it calls the click function
 function checkBodyLoad () {
   let primary = document.getElementById('primary')
   if (primary){
@@ -9,12 +7,10 @@ function checkBodyLoad () {
   }
 }
 
-//click on the like button function
 function autoClick(){
-  let likeButton = document.getElementsByClassName('yt-spec-button-shape-next yt-spec-button-shape-next--tonal yt-spec-button-shape-next--mono yt-spec-button-shape-next--size-m yt-spec-button-shape-next--icon-leading yt-spec-button-shape-next--segmented-start ')[0]
-  //verifies if the like button is already clicked
-  if(likeButton.ariaPressed === 'false'){
-    //click action
+  let likeButton = document.querySelectorAll('#top-level-buttons-computed > segmented-like-dislike-button-view-model > yt-smartimation > div > div > like-button-view-model > toggle-button-view-model > button-view-model > button > yt-touch-feedback-shape > div')[0]
+  let mainDiv = document.querySelectorAll("#top-level-buttons-computed > segmented-like-dislike-button-view-model > yt-smartimation > div > div > like-button-view-model > toggle-button-view-model > button-view-model > button")[0]
+  if(mainDiv.title !== 'Remover "Gostei"'){
     likeButton.click()
   }
 }
